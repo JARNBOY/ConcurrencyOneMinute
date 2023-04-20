@@ -7,5 +7,6 @@ target 'ConcurrencyOneMinute' do
 
   # Pods for ConcurrencyOneMinute
   pod 'Alamofire'
+  #pod 'SwiftyJSON', '~> 4.0'
 
 end

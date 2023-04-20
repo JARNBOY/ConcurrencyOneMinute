@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		792C85A48C03533F3D49DD8E /* Pods_ConcurrencyOneMinute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16F2EE598DF3AE80C5AC72 /* Pods_ConcurrencyOneMinute.framework */; };
+		FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E92E29F13AB5005FD0C6 /* APIManager.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -25,6 +26,7 @@
 		2316C1DCD3C3247367FE258F /* Pods-ConcurrencyOneMinute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyOneMinute.release.xcconfig"; path = "Target Support Files/Pods-ConcurrencyOneMinute/Pods-ConcurrencyOneMinute.release.xcconfig"; sourceTree = "<group>"; };
 		2D16F2EE598DF3AE80C5AC72 /* Pods_ConcurrencyOneMinute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcurrencyOneMinute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CF542E55DF177043891D96 /* Pods-ConcurrencyOneMinute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyOneMinute.debug.xcconfig"; path = "Target Support Files/Pods-ConcurrencyOneMinute/Pods-ConcurrencyOneMinute.debug.xcconfig"; sourceTree = "<group>"; };
+		FB91E92E29F13AB5005FD0C6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB91E92D29F13AA1005FD0C6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E92E29F13AB5005FD0C6 /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		FBAEA99929F1337900437DDA = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		FBAEA9A429F1337900437DDA /* ConcurrencyOneMinute */ = {
 			isa = PBXGroup;
 			children = (
+				FB91E92D29F13AA1005FD0C6 /* Manager */,
 				FBAEA9B929F1338600437DDA /* Home */,
 				FBAEA9A529F1337900437DDA /* AppDelegate.swift */,
 				FBAEA9A729F1337900437DDA /* SceneDelegate.swift */,
@@ -232,6 +243,7 @@
 				FBAEA9C229F133A400437DDA /* HomeRouter.swift in Sources */,
 				FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */,
 				FBAEA9C429F133A400437DDA /* HomeViewController.swift in Sources */,
+				FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */,
 				FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */,
 				FBAEA9C129F133A400437DDA /* HomeWorker.swift in Sources */,
 				FBAEA9C529F133A400437DDA /* HomeInteractor.swift in Sources */,
