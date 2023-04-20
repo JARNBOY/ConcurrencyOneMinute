@@ -1,5 +1,5 @@
 //
-//  HomeRouter.swift
+//  HistoryRouter.swift
 //  ConcurrencyOneMinute
 //
 //  Created by Papon Supamongkonchai on 20/4/2566 BE.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic
+@objc protocol HistoryRoutingLogic
 {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol HomeDataPassing
+protocol HistoryDataPassing
 {
-    var dataStore: HomeDataStore? { get }
+    var dataStore: HistoryDataStore? { get }
 }
 
-class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing
+class HistoryRouter: NSObject, HistoryRoutingLogic, HistoryDataPassing
 {
-    weak var viewController: HomeViewController?
-    var dataStore: HomeDataStore?
+    weak var viewController: HistoryViewController?
+    var dataStore: HistoryDataStore?
     
     // MARK: Routing
     
@@ -46,14 +46,14 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing
     
     // MARK: Navigation
     
-    //func navigateToSomewhere(source: HomeViewController, destination: SomewhereViewController)
+    //func navigateToSomewhere(source: HistoryViewController, destination: SomewhereViewController)
     //{
     //  source.show(destination, sender: nil)
     //}
     
     // MARK: Passing data
     
-    //func passDataToSomewhere(source: HomeDataStore, destination: inout SomewhereDataStore)
+    //func passDataToSomewhere(source: HistoryDataStore, destination: inout SomewhereDataStore)
     //{
     //  destination.name = source.name
     //}

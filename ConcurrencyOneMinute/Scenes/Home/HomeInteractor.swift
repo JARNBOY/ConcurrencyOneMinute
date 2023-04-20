@@ -17,6 +17,8 @@ protocol HomeBusinessLogic
     func getPriceCoin(request: Home.PriceAsset.Request)
     func subscribePriceUpdate()
     func unSubscribePriceUpdate()
+    func openAssetHistoryPrice()
+    func savePricesInLocal(pricesListSave: [PriceDisplayModel])
 }
 
 protocol HomeDataStore
@@ -28,15 +30,14 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
 {
     var presenter: HomePresentationLogic?
     var worker: HomeWorker = HomeWorker(service: HomeService())
-    //var name: String = ""
+    
     var timeUpdate = 60
     var timer: Timer? = nil
     var assetPrices: [String: Currency]? = nil
     
     // MARK: Do something
     
-    func getPriceCoin(request: Home.PriceAsset.Request)
-    {
+    func getPriceCoin(request: Home.PriceAsset.Request) {
         worker.getCurrentPriceCoin { response in
             self.presenter?.presentGetPriceCoin(response: response)
         } fail: { error in
@@ -53,12 +54,21 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
                 self.timeUpdate -= 1
             }
         }
-        
     }
     
     func unSubscribePriceUpdate() {
         timer?.invalidate()
         timer = nil
         timeUpdate = 60
+    }
+    
+    func openAssetHistoryPrice() {
+        presenter?.presentOpenAssetHistoryPrice()
+    }
+    
+    func savePricesInLocal(pricesListSave: [PriceDisplayModel]) {
+        worker.savePriceDataInHistory(pricesListSave: pricesListSave) {
+            self.presenter?.presentSavePricesInLocal()
+        }
     }
 }

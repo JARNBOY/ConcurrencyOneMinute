@@ -1,5 +1,5 @@
 //
-//  HomeModels.swift
+//  HistoryModels.swift
 //  ConcurrencyOneMinute
 //
 //  Created by Papon Supamongkonchai on 20/4/2566 BE.
@@ -12,29 +12,20 @@
 
 import UIKit
 
-enum Home
+enum History
 {
     // MARK: Use cases
-    enum PriceAsset
+    
+    enum Something
     {
         struct Request
         {
-            
         }
         struct Response
         {
-            var prices: [String: Currency]
         }
         struct ViewModel
         {
-            var pricesDisplayModel: [PriceDisplayModel]
         }
     }
-    
-    struct PriceDisplayModel {
-        var nameCoin: String
-        var priceCoin: String
-    }
 }
-
-

@@ -14,6 +14,7 @@ import UIKit
 
 protocol HomeWorkerInterface {
     func getCurrentPriceCoin(success: @escaping (Home.PriceAsset.Response) -> (), fail: @escaping (_ error: String?) -> ())
+    func savePriceDataInHistory(pricesListSave: [PriceDisplayModel], success:@escaping () -> Void)
 }
 
 class HomeWorker: HomeWorkerInterface
@@ -26,11 +27,16 @@ class HomeWorker: HomeWorkerInterface
     
     func getCurrentPriceCoin(success: @escaping (Home.PriceAsset.Response) -> (), fail: @escaping (String?) -> ()) {
         service.getCurrentPriceCoin { coinAssetPriceModel in
-            
-            let response : Home.PriceAsset.Response = Home.PriceAsset.Response(prices: coinAssetPriceModel.bpi)
+            let response: Home.PriceAsset.Response = Home.PriceAsset.Response(timeUpdate: coinAssetPriceModel.time.updated, prices: coinAssetPriceModel.bpi)
             success(response)
         } fail: { error in
             fail(error)
+        }
+    }
+    
+    func savePriceDataInHistory(pricesListSave: [PriceDisplayModel], success:@escaping () -> Void) {
+        LocalDataManager.shared.savePricesBPI(pricesBPI: pricesListSave) {
+            success()
         }
     }
     

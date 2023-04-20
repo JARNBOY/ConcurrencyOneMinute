@@ -16,6 +16,8 @@ protocol HomeDisplayLogic: AnyObject
 {
     func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel)
     func displaySubscribePriceUpdate()
+    func displayOpenAssetHistoryPrice()
+    func displaySavePricesInLocal()
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic
@@ -26,9 +28,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     //MARK: Property Control & Data
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-    var assetPrices: [Home.PriceDisplayModel] = []
+    var assetPrices: [PriceDisplayModel] = []
     
-    //MARK: Life cycle
+    //MARK: setup
     override func awakeFromNib() {
         super.awakeFromNib()
         let config = HomeConfigurator()
@@ -52,6 +54,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: "6200EE")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
+        let rightButton = UIBarButtonItem(image: UIImage(systemName: "clock"), style: .plain, target: self, action: #selector(infoButtonPressed))
+        self.navigationItem.rightBarButtonItem = rightButton
+        
         assetPriceTableView.delegate = self
         assetPriceTableView.dataSource = self
     }
@@ -62,16 +67,30 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         interactor?.getPriceCoin(request: request)
     }
     
+    // MARK: Button Action
+    @objc func infoButtonPressed() {
+        self.interactor?.openAssetHistoryPrice()
+    }
+    
     // MARK: HomeDisplayLogic
     func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel) {
         self.assetPrices = viewModel.pricesDisplayModel
-        self.assetPriceTableView.reloadData()
-        self.interactor?.subscribePriceUpdate()
+        self.interactor?.savePricesInLocal(pricesListSave: self.assetPrices)
     }
     
     func displaySubscribePriceUpdate() {
         loadPriceCoin()
     }
+    
+    func displayOpenAssetHistoryPrice() {
+        self.router?.routeToHistoryView()
+    }
+    
+    func displaySavePricesInLocal() {
+        self.assetPriceTableView.reloadData()
+        self.interactor?.subscribePriceUpdate()
+    }
+    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {

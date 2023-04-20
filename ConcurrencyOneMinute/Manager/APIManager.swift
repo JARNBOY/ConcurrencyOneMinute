@@ -24,7 +24,12 @@ class APIManager {
     
     func request<T: Codable>(_ url: String, method: HTTPMethod = .get, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: HTTPHeaders? = nil, completion: @escaping (APIResult<T>) -> Void) {
         
-        AF.request(url).responseDecodable(of: T.self) { response in
+        AF.request(url,
+                   method: method,
+                   parameters: parameters,
+                   encoding: encoding,
+                   headers: headers
+        ).responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let data):
                 do {

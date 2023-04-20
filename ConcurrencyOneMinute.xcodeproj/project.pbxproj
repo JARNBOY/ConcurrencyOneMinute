@@ -14,6 +14,16 @@
 		FB91E93629F14589005FD0C6 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93529F14589005FD0C6 /* HomeService.swift */; };
 		FB91E93929F14D34005FD0C6 /* CoinAssetPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93829F14D34005FD0C6 /* CoinAssetPriceModel.swift */; };
 		FB91E93C29F155CC005FD0C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93B29F155CC005FD0C6 /* UIColor.swift */; };
+		FB91E94529F15E9E005FD0C6 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93F29F15E9E005FD0C6 /* HistoryPresenter.swift */; };
+		FB91E94629F15E9E005FD0C6 /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94029F15E9E005FD0C6 /* HistoryWorker.swift */; };
+		FB91E94729F15E9E005FD0C6 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94129F15E9E005FD0C6 /* HistoryRouter.swift */; };
+		FB91E94829F15E9E005FD0C6 /* HistoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94229F15E9E005FD0C6 /* HistoryModels.swift */; };
+		FB91E94929F15E9E005FD0C6 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94329F15E9E005FD0C6 /* HistoryViewController.swift */; };
+		FB91E94A29F15E9E005FD0C6 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94429F15E9E005FD0C6 /* HistoryInteractor.swift */; };
+		FB91E94D29F15ED5005FD0C6 /* HistoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91E94C29F15ED5005FD0C6 /* HistoryStoryboard.storyboard */; };
+		FB91E94F29F15FCC005FD0C6 /* HistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94E29F15FCC005FD0C6 /* HistoryConfigurator.swift */; };
+		FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */; };
+		FB91E95329F17DFF005FD0C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95229F17DFF005FD0C6 /* Constants.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -37,6 +47,16 @@
 		FB91E93529F14589005FD0C6 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		FB91E93829F14D34005FD0C6 /* CoinAssetPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAssetPriceModel.swift; sourceTree = "<group>"; };
 		FB91E93B29F155CC005FD0C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FB91E93F29F15E9E005FD0C6 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		FB91E94029F15E9E005FD0C6 /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
+		FB91E94129F15E9E005FD0C6 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		FB91E94229F15E9E005FD0C6 /* HistoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModels.swift; sourceTree = "<group>"; };
+		FB91E94329F15E9E005FD0C6 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		FB91E94429F15E9E005FD0C6 /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		FB91E94C29F15ED5005FD0C6 /* HistoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryStoryboard.storyboard; sourceTree = "<group>"; };
+		FB91E94E29F15FCC005FD0C6 /* HistoryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryConfigurator.swift; sourceTree = "<group>"; };
+		FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		FB91E95229F17DFF005FD0C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				FB91E92E29F13AB5005FD0C6 /* APIManager.swift */,
+				FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */,
+				FB91E95229F17DFF005FD0C6 /* Constants.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -113,6 +135,39 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FB91E93D29F15E41005FD0C6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E93E29F15E75005FD0C6 /* History */,
+				FBAEA9B929F1338600437DDA /* Home */,
+				FB91E94B29F15EB0005FD0C6 /* ComponentView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FB91E93E29F15E75005FD0C6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E94C29F15ED5005FD0C6 /* HistoryStoryboard.storyboard */,
+				FB91E93F29F15E9E005FD0C6 /* HistoryPresenter.swift */,
+				FB91E94029F15E9E005FD0C6 /* HistoryWorker.swift */,
+				FB91E94129F15E9E005FD0C6 /* HistoryRouter.swift */,
+				FB91E94229F15E9E005FD0C6 /* HistoryModels.swift */,
+				FB91E94329F15E9E005FD0C6 /* HistoryViewController.swift */,
+				FB91E94429F15E9E005FD0C6 /* HistoryInteractor.swift */,
+				FB91E94E29F15FCC005FD0C6 /* HistoryConfigurator.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		FB91E94B29F15EB0005FD0C6 /* ComponentView */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E93229F141B8005FD0C6 /* TableViewCells */,
+			);
+			path = ComponentView;
+			sourceTree = "<group>";
+		};
 		FBAEA99929F1337900437DDA = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +192,7 @@
 				FB91E93A29F155BF005FD0C6 /* Extension */,
 				FB91E93729F14D17005FD0C6 /* Models */,
 				FB91E92D29F13AA1005FD0C6 /* Manager */,
-				FB91E93229F141B8005FD0C6 /* TableViewCells */,
-				FBAEA9B929F1338600437DDA /* Home */,
+				FB91E93D29F15E41005FD0C6 /* Scenes */,
 				FBAEA9A529F1337900437DDA /* AppDelegate.swift */,
 				FBAEA9A729F1337900437DDA /* SceneDelegate.swift */,
 				FBAEA9AE29F1337B00437DDA /* Assets.xcassets */,
@@ -226,6 +280,7 @@
 			files = (
 				FBAEA9B229F1337B00437DDA /* LaunchScreen.storyboard in Resources */,
 				FBAEA9AF29F1337B00437DDA /* Assets.xcassets in Resources */,
+				FB91E94D29F15ED5005FD0C6 /* HistoryStoryboard.storyboard in Resources */,
 				FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,13 +340,22 @@
 				FBAEA9C429F133A400437DDA /* HomeViewController.swift in Sources */,
 				FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */,
 				FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */,
+				FB91E95329F17DFF005FD0C6 /* Constants.swift in Sources */,
+				FB91E94829F15E9E005FD0C6 /* HistoryModels.swift in Sources */,
+				FB91E94A29F15E9E005FD0C6 /* HistoryInteractor.swift in Sources */,
 				FB91E93929F14D34005FD0C6 /* CoinAssetPriceModel.swift in Sources */,
 				FBAEA9C129F133A400437DDA /* HomeWorker.swift in Sources */,
 				FB91E93629F14589005FD0C6 /* HomeService.swift in Sources */,
 				FBAEA9C529F133A400437DDA /* HomeInteractor.swift in Sources */,
+				FB91E94729F15E9E005FD0C6 /* HistoryRouter.swift in Sources */,
+				FB91E94629F15E9E005FD0C6 /* HistoryWorker.swift in Sources */,
+				FB91E94529F15E9E005FD0C6 /* HistoryPresenter.swift in Sources */,
+				FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */,
 				FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */,
 				FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */,
+				FB91E94929F15E9E005FD0C6 /* HistoryViewController.swift in Sources */,
 				FBAEA9C329F133A400437DDA /* HomeModels.swift in Sources */,
+				FB91E94F29F15FCC005FD0C6 /* HistoryConfigurator.swift in Sources */,
 				FB91E93129F140C8005FD0C6 /* HomeConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

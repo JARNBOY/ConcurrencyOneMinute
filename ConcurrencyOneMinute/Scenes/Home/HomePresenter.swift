@@ -16,6 +16,8 @@ protocol HomePresentationLogic
 {
     func presentGetPriceCoin(response: Home.PriceAsset.Response)
     func presentSubscribePriceUpdate()
+    func presentOpenAssetHistoryPrice()
+    func presentSavePricesInLocal()
     
 }
 
@@ -26,9 +28,9 @@ class HomePresenter: HomePresentationLogic
     // MARK: Do something
     
     func presentGetPriceCoin(response: Home.PriceAsset.Response) {
-        let pricesDisplayModel: [Home.PriceDisplayModel] = response.prices
+        let pricesDisplayModel: [PriceDisplayModel] = response.prices
             .compactMap {
-                Home.PriceDisplayModel(nameCoin: $0.key, priceCoin: $0.value.rate)
+                PriceDisplayModel(nameCoin: $0.key, priceCoin: $0.value.rate, time: response.timeUpdate)
             }
         let viewModel = Home.PriceAsset.ViewModel(pricesDisplayModel: pricesDisplayModel)
         viewController?.displayGetPriceCoin(viewModel: viewModel)
@@ -37,4 +39,13 @@ class HomePresenter: HomePresentationLogic
     func presentSubscribePriceUpdate() {
         viewController?.displaySubscribePriceUpdate()
     }
+    
+    func presentOpenAssetHistoryPrice() {
+        viewController?.displayOpenAssetHistoryPrice()
+    }
+    
+    func presentSavePricesInLocal() {
+        viewController?.displaySavePricesInLocal()
+    }
+    
 }
