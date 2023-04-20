@@ -10,7 +10,7 @@
 		792C85A48C03533F3D49DD8E /* Pods_ConcurrencyOneMinute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16F2EE598DF3AE80C5AC72 /* Pods_ConcurrencyOneMinute.framework */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
-		FBAEA9AD29F1337900437DDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* Main.storyboard */; };
+		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
 		FBAEA9AF29F1337B00437DDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AE29F1337B00437DDA /* Assets.xcassets */; };
 		FBAEA9B229F1337B00437DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9B029F1337B00437DDA /* LaunchScreen.storyboard */; };
 		FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9BA29F133A400437DDA /* HomePresenter.swift */; };
@@ -28,7 +28,7 @@
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBAEA9AC29F1337900437DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FBAEA9AC29F1337900437DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		FBAEA9AE29F1337B00437DDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBAEA9B129F1337B00437DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBAEA9B329F1337B00437DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 				33CF542E55DF177043891D96 /* Pods-ConcurrencyOneMinute.debug.xcconfig */,
 				2316C1DCD3C3247367FE258F /* Pods-ConcurrencyOneMinute.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,7 +103,7 @@
 		FBAEA9B929F1338600437DDA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FBAEA9AB29F1337900437DDA /* Main.storyboard */,
+				FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */,
 				FBAEA9BA29F133A400437DDA /* HomePresenter.swift */,
 				FBAEA9BB29F133A400437DDA /* HomeWorker.swift */,
 				FBAEA9BC29F133A400437DDA /* HomeRouter.swift */,
@@ -177,7 +176,7 @@
 			files = (
 				FBAEA9B229F1337B00437DDA /* LaunchScreen.storyboard in Resources */,
 				FBAEA9AF29F1337B00437DDA /* Assets.xcassets in Resources */,
-				FBAEA9AD29F1337900437DDA /* Main.storyboard in Resources */,
+				FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,12 +243,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FBAEA9AB29F1337900437DDA /* Main.storyboard */ = {
+		FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FBAEA9AC29F1337900437DDA /* Base */,
 			);
-			name = Main.storyboard;
+			name = HomeStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		FBAEA9B029F1337B00437DDA /* LaunchScreen.storyboard */ = {

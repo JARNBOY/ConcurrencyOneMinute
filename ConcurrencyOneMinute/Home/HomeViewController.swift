@@ -69,7 +69,17 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        setupView()
         doSomething()
+        
+    }
+    
+    //MARK: View
+    private func setupView() {
+        //set Navigation Bar
+        self.navigationItem.title = "Concerrency Price"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
     }
     
     // MARK: Do something
