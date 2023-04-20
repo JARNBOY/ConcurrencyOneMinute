@@ -24,6 +24,7 @@
 		FB91E94F29F15FCC005FD0C6 /* HistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E94E29F15FCC005FD0C6 /* HistoryConfigurator.swift */; };
 		FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */; };
 		FB91E95329F17DFF005FD0C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95229F17DFF005FD0C6 /* Constants.swift */; };
+		FB91E95529F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95429F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -57,6 +58,7 @@
 		FB91E94E29F15FCC005FD0C6 /* HistoryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryConfigurator.swift; sourceTree = "<group>"; };
 		FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		FB91E95229F17DFF005FD0C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB91E95429F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPriceTableViewCell.swift; sourceTree = "<group>"; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				FB91E93329F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift */,
+				FB91E95429F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				FB91E94529F15E9E005FD0C6 /* HistoryPresenter.swift in Sources */,
 				FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */,
 				FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */,
+				FB91E95529F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift in Sources */,
 				FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */,
 				FB91E94929F15E9E005FD0C6 /* HistoryViewController.swift in Sources */,
 				FBAEA9C329F133A400437DDA /* HomeModels.swift in Sources */,

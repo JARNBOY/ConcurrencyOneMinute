@@ -15,17 +15,11 @@ import UIKit
 enum History
 {
     // MARK: Use cases
-    
-    enum Something
+    enum PriceAsset
     {
-        struct Request
-        {
-        }
-        struct Response
-        {
-        }
         struct ViewModel
         {
+            var pricesDisplayModel: [PriceDisplayModel]
         }
     }
 }

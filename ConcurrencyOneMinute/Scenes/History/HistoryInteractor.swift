@@ -14,28 +14,26 @@ import UIKit
 
 protocol HistoryBusinessLogic
 {
-    func doSomething(request: History.Something.Request)
+    func getHistoryCoinAssets()
 }
 
 protocol HistoryDataStore
 {
-    //var name: String { get set }
+    
 }
 
 class HistoryInteractor: HistoryBusinessLogic, HistoryDataStore
 {
     var presenter: HistoryPresentationLogic?
-    var worker: HistoryWorker?
-    //var name: String = ""
+    var worker: HistoryWorker = HistoryWorker()
     
     // MARK: Do something
     
-    func doSomething(request: History.Something.Request)
-    {
-        worker = HistoryWorker()
-        worker?.doSomeWork()
+    func getHistoryCoinAssets() {
+        worker.getPriceDataInHistory { assetPrices in
+            let response = History.PriceAsset.ViewModel(pricesDisplayModel: assetPrices)
+            self.presenter?.presentGetHistoryCoinAssets(response: response)
+        }
         
-        let response = History.Something.Response()
-        presenter?.presentSomething(response: response)
     }
 }

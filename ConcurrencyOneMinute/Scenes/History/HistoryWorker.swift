@@ -12,9 +12,14 @@
 
 import UIKit
 
+protocol HistoryWorkerInterface {
+    func getPriceDataInHistory(success:@escaping () -> Void)
+}
+
 class HistoryWorker
 {
-    func doSomeWork()
-    {
+    func getPriceDataInHistory(success:@escaping ([PriceDisplayModel]) -> Void) {
+        let pricesHistory = LocalDataManager.shared.getPricesBPI()
+        success(pricesHistory)
     }
 }

@@ -14,7 +14,7 @@ import UIKit
 
 protocol HistoryPresentationLogic
 {
-    func presentSomething(response: History.Something.Response)
+    func presentGetHistoryCoinAssets(response: History.PriceAsset.ViewModel)
 }
 
 class HistoryPresenter: HistoryPresentationLogic
@@ -23,9 +23,8 @@ class HistoryPresenter: HistoryPresentationLogic
     
     // MARK: Do something
     
-    func presentSomething(response: History.Something.Response)
-    {
-        let viewModel = History.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentGetHistoryCoinAssets(response: History.PriceAsset.ViewModel) {
+        let viewModel = response
+        viewController?.displayGetHistoryCoinAssets(viewModel: viewModel)
     }
 }

@@ -14,13 +14,18 @@ import UIKit
 
 protocol HistoryDisplayLogic: AnyObject
 {
-    func displaySomething(viewModel: History.Something.ViewModel)
+    func displayGetHistoryCoinAssets(viewModel: History.PriceAsset.ViewModel)
 }
 
 class HistoryViewController: UIViewController, HistoryDisplayLogic
 {
+    //MARK: Property View
+    @IBOutlet weak var assetHistoryPriceTableView: UITableView!
+    
+    //MARK: Property Control & Data
     var interactor: HistoryBusinessLogic?
     var router: (NSObjectProtocol & HistoryRoutingLogic & HistoryDataPassing)?
+    var assetPrices: [PriceDisplayModel] = []
     
     //MARK: setup
     override func awakeFromNib() {
@@ -34,23 +39,43 @@ class HistoryViewController: UIViewController, HistoryDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let list = LocalDataManager.shared.getPricesBPI()
-        print(list)
-        doSomething()
+        setupView()
+        getHistoryCoinAssets()
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething()
-    {
-        let request = History.Something.Request()
-        interactor?.doSomething(request: request)
+    //MARK: View
+    private func setupView() {
+        assetHistoryPriceTableView.delegate = self
+        assetHistoryPriceTableView.dataSource = self
     }
     
-    func displaySomething(viewModel: History.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+    // MARK: Function
+    func getHistoryCoinAssets() {
+        interactor?.getHistoryCoinAssets()
+    }
+    
+    // MARK: HistoryDisplayLogic
+    func displayGetHistoryCoinAssets(viewModel: History.PriceAsset.ViewModel) {
+        self.assetPrices = viewModel.pricesDisplayModel
+        self.assetHistoryPriceTableView.reloadData()
+    }
+}
+
+extension HistoryViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return assetPrices.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryPriceTableViewCell", for: indexPath) as! HistoryPriceTableViewCell
+        cell.configure(
+            assetTitle: self.assetPrices[indexPath.row].nameCoin.uppercased(),
+            assetPrice: self.assetPrices[indexPath.row].priceCoin,
+            timeUpdated: self.assetPrices[indexPath.row].time)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60)
     }
 }
