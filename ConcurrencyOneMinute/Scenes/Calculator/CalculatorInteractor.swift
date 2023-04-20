@@ -37,6 +37,6 @@ class CalculatorInteractor: CalculatorBusinessLogic, CalculatorDataStore
     }
     
     func setCurrencyNameConvert() {
-        presenter?.presentSetCurrencyNameConvert(coinName: currencyRatePerBTC?.nameCoin ?? "")
+        presenter?.presentSetCurrencyNameConvert(currencyRatePerBTC: currencyRatePerBTC)
     }
 }

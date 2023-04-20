@@ -15,7 +15,7 @@ import UIKit
 protocol CalculatorDisplayLogic: AnyObject
 {
     func displayCalculateResult(viewModel: Calculator.DisplayResultCalcutor)
-    func displaySetCurrencyNameConvert(coinName: String)
+    func displaySetCurrencyNameConvert(currencyRatePerBTC: CurrencyRatePerBTC?)
 }
 
 class CalculatorViewController: UIViewController, CalculatorDisplayLogic
@@ -61,8 +61,11 @@ class CalculatorViewController: UIViewController, CalculatorDisplayLogic
         self.resultCalculateLabel.text = viewModel.resultCalcutor.toCurrencyString()
     }
     
-    func displaySetCurrencyNameConvert(coinName: String) {
-        self.nameConcurrencyLabel.text = coinName
+    func displaySetCurrencyNameConvert(currencyRatePerBTC: CurrencyRatePerBTC?) {
+        if let currencyRatePerBTC = currencyRatePerBTC {
+            self.nameConcurrencyLabel.text = "\(currencyRatePerBTC.nameCoin) : \(currencyRatePerBTC.rateCoinPerBTC)"
+        }
+        
     }
 }
 

@@ -15,7 +15,7 @@ import UIKit
 protocol CalculatorPresentationLogic
 {
     func presentCalculateResult(response: Calculator.RatePerBTC)
-    func presentSetCurrencyNameConvert(coinName: String)
+    func presentSetCurrencyNameConvert(currencyRatePerBTC: CurrencyRatePerBTC?)
 }
 
 class CalculatorPresenter: CalculatorPresentationLogic
@@ -29,7 +29,7 @@ class CalculatorPresenter: CalculatorPresentationLogic
         viewController?.displayCalculateResult(viewModel: viewModel)
     }
     
-    func presentSetCurrencyNameConvert(coinName: String) {
-        viewController?.displaySetCurrencyNameConvert(coinName: coinName)
+    func presentSetCurrencyNameConvert(currencyRatePerBTC: CurrencyRatePerBTC?) {
+        viewController?.displaySetCurrencyNameConvert(currencyRatePerBTC: currencyRatePerBTC)
     }
 }
