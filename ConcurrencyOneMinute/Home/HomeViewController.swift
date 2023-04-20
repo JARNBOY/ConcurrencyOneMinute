@@ -15,6 +15,7 @@ import UIKit
 protocol HomeDisplayLogic: AnyObject
 {
     func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel)
+    func displaySubscribePriceUpdate()
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic
@@ -39,7 +40,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     {
         super.viewDidLoad()
         setupView()
-        doSomething()
+        loadPriceCoin()
     }
     
     //MARK: View
@@ -56,18 +57,20 @@ class HomeViewController: UIViewController, HomeDisplayLogic
     }
     
     // MARK: Function
-    func doSomething()
-    {
+    func loadPriceCoin() {
         let request = Home.PriceAsset.Request()
         interactor?.getPriceCoin(request: request)
     }
     
     // MARK: HomeDisplayLogic
-    func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+    func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel) {
         self.assetPrices = viewModel.pricesDisplayModel
         self.assetPriceTableView.reloadData()
+        self.interactor?.subscribePriceUpdate()
+    }
+    
+    func displaySubscribePriceUpdate() {
+        loadPriceCoin()
     }
 }
 

@@ -15,6 +15,8 @@ import UIKit
 protocol HomePresentationLogic
 {
     func presentGetPriceCoin(response: Home.PriceAsset.Response)
+    func presentSubscribePriceUpdate()
+    
 }
 
 class HomePresenter: HomePresentationLogic
@@ -23,13 +25,16 @@ class HomePresenter: HomePresentationLogic
     
     // MARK: Do something
     
-    func presentGetPriceCoin(response: Home.PriceAsset.Response)
-    {
+    func presentGetPriceCoin(response: Home.PriceAsset.Response) {
         let pricesDisplayModel: [Home.PriceDisplayModel] = response.prices
             .compactMap {
                 Home.PriceDisplayModel(nameCoin: $0.key, priceCoin: $0.value.rate)
             }
         let viewModel = Home.PriceAsset.ViewModel(pricesDisplayModel: pricesDisplayModel)
         viewController?.displayGetPriceCoin(viewModel: viewModel)
+    }
+    
+    func presentSubscribePriceUpdate() {
+        viewController?.displaySubscribePriceUpdate()
     }
 }

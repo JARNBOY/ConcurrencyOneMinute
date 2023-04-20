@@ -15,6 +15,8 @@ import UIKit
 protocol HomeBusinessLogic
 {
     func getPriceCoin(request: Home.PriceAsset.Request)
+    func subscribePriceUpdate()
+    func unSubscribePriceUpdate()
 }
 
 protocol HomeDataStore
@@ -27,6 +29,9 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
     var presenter: HomePresentationLogic?
     var worker: HomeWorker = HomeWorker(service: HomeService())
     //var name: String = ""
+    var timeUpdate = 60
+    var timer: Timer? = nil
+    var assetPrices: [String: Currency]? = nil
     
     // MARK: Do something
     
@@ -37,5 +42,23 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
         } fail: { error in
             print("Error getPriceCoin : \(error?.description)")
         }
+    }
+    
+    func subscribePriceUpdate() {
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            if self.timeUpdate <= 0 {
+                self.unSubscribePriceUpdate()
+                self.presenter?.presentSubscribePriceUpdate()
+            } else {
+                self.timeUpdate -= 1
+            }
+        }
+        
+    }
+    
+    func unSubscribePriceUpdate() {
+        timer?.invalidate()
+        timer = nil
+        timeUpdate = 60
     }
 }
