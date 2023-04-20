@@ -14,7 +14,7 @@ import UIKit
 
 protocol HomeBusinessLogic
 {
-    func doSomething(request: Home.Something.Request)
+    func getPriceCoin(request: Home.PriceAsset.Request)
 }
 
 protocol HomeDataStore
@@ -25,17 +25,17 @@ protocol HomeDataStore
 class HomeInteractor: HomeBusinessLogic, HomeDataStore
 {
     var presenter: HomePresentationLogic?
-    var worker: HomeWorker?
+    var worker: HomeWorker = HomeWorker(service: HomeService())
     //var name: String = ""
     
     // MARK: Do something
     
-    func doSomething(request: Home.Something.Request)
+    func getPriceCoin(request: Home.PriceAsset.Request)
     {
-        worker = HomeWorker()
-        worker?.doSomeWork()
-        
-        let response = Home.Something.Response()
-        presenter?.presentSomething(response: response)
+        worker.getCurrentPriceCoin { response in
+            self.presenter?.presentGetPriceCoin(response: response)
+        } fail: { error in
+            print("Error getPriceCoin : \(error?.description)")
+        }
     }
 }

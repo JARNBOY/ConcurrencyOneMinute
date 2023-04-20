@@ -14,15 +14,18 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject
 {
-    func displaySomething(viewModel: Home.Something.ViewModel)
+    func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel)
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic
 {
+    //MARK: Property View
+    @IBOutlet weak var assetPriceTableView: UITableView!
+    
+    //MARK: Property Control & Data
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-    
-    // MARK: Object lifecycle
+    var assetPrices: [Home.PriceDisplayModel] = []
     
     //MARK: Life cycle
     override func awakeFromNib() {
@@ -31,26 +34,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         config.configure(viewController: self)
     }
     
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-    
     // MARK: View lifecycle
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setupView()
         doSomething()
-        
     }
     
     //MARK: View
@@ -59,20 +48,38 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         self.navigationItem.title = "Concerrency Price"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "6200EE")
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        assetPriceTableView.delegate = self
+        assetPriceTableView.dataSource = self
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
+    // MARK: Function
     func doSomething()
     {
-        let request = Home.Something.Request()
-        interactor?.doSomething(request: request)
+        let request = Home.PriceAsset.Request()
+        interactor?.getPriceCoin(request: request)
     }
     
-    func displaySomething(viewModel: Home.Something.ViewModel)
+    // MARK: HomeDisplayLogic
+    func displayGetPriceCoin(viewModel: Home.PriceAsset.ViewModel)
     {
         //nameTextField.text = viewModel.name
+        self.assetPrices = viewModel.pricesDisplayModel
+        self.assetPriceTableView.reloadData()
     }
 }
+
+extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return assetPrices.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConcerrencyPriceTableViewCell", for: indexPath) as! ConcerrencyPriceTableViewCell
+        cell.configure(assetTitle: self.assetPrices[indexPath.row].nameCoin.uppercased(), assetPrice: self.assetPrices[indexPath.row].priceCoin)
+        return cell
+    }
+}
+

@@ -10,6 +10,10 @@
 		792C85A48C03533F3D49DD8E /* Pods_ConcurrencyOneMinute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16F2EE598DF3AE80C5AC72 /* Pods_ConcurrencyOneMinute.framework */; };
 		FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E92E29F13AB5005FD0C6 /* APIManager.swift */; };
 		FB91E93129F140C8005FD0C6 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93029F140C8005FD0C6 /* HomeConfigurator.swift */; };
+		FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93329F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift */; };
+		FB91E93629F14589005FD0C6 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93529F14589005FD0C6 /* HomeService.swift */; };
+		FB91E93929F14D34005FD0C6 /* CoinAssetPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93829F14D34005FD0C6 /* CoinAssetPriceModel.swift */; };
+		FB91E93C29F155CC005FD0C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E93B29F155CC005FD0C6 /* UIColor.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -29,6 +33,10 @@
 		33CF542E55DF177043891D96 /* Pods-ConcurrencyOneMinute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyOneMinute.debug.xcconfig"; path = "Target Support Files/Pods-ConcurrencyOneMinute/Pods-ConcurrencyOneMinute.debug.xcconfig"; sourceTree = "<group>"; };
 		FB91E92E29F13AB5005FD0C6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FB91E93029F140C8005FD0C6 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		FB91E93329F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcerrencyPriceTableViewCell.swift; sourceTree = "<group>"; };
+		FB91E93529F14589005FD0C6 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		FB91E93829F14D34005FD0C6 /* CoinAssetPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAssetPriceModel.swift; sourceTree = "<group>"; };
+		FB91E93B29F155CC005FD0C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,30 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		FB91E93229F141B8005FD0C6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E93329F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FB91E93729F14D17005FD0C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E93829F14D34005FD0C6 /* CoinAssetPriceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB91E93A29F155BF005FD0C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E93B29F155CC005FD0C6 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FBAEA99929F1337900437DDA = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +134,10 @@
 		FBAEA9A429F1337900437DDA /* ConcurrencyOneMinute */ = {
 			isa = PBXGroup;
 			children = (
+				FB91E93A29F155BF005FD0C6 /* Extension */,
+				FB91E93729F14D17005FD0C6 /* Models */,
 				FB91E92D29F13AA1005FD0C6 /* Manager */,
+				FB91E93229F141B8005FD0C6 /* TableViewCells */,
 				FBAEA9B929F1338600437DDA /* Home */,
 				FBAEA9A529F1337900437DDA /* AppDelegate.swift */,
 				FBAEA9A729F1337900437DDA /* SceneDelegate.swift */,
@@ -124,6 +159,7 @@
 				FBAEA9BE29F133A400437DDA /* HomeViewController.swift */,
 				FBAEA9BF29F133A400437DDA /* HomeInteractor.swift */,
 				FB91E93029F140C8005FD0C6 /* HomeConfigurator.swift */,
+				FB91E93529F14589005FD0C6 /* HomeService.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -244,12 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBAEA9C229F133A400437DDA /* HomeRouter.swift in Sources */,
+				FB91E93C29F155CC005FD0C6 /* UIColor.swift in Sources */,
 				FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */,
 				FBAEA9C429F133A400437DDA /* HomeViewController.swift in Sources */,
 				FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */,
 				FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */,
+				FB91E93929F14D34005FD0C6 /* CoinAssetPriceModel.swift in Sources */,
 				FBAEA9C129F133A400437DDA /* HomeWorker.swift in Sources */,
+				FB91E93629F14589005FD0C6 /* HomeService.swift in Sources */,
 				FBAEA9C529F133A400437DDA /* HomeInteractor.swift in Sources */,
+				FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */,
 				FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */,
 				FBAEA9C329F133A400437DDA /* HomeModels.swift in Sources */,
 				FB91E93129F140C8005FD0C6 /* HomeConfigurator.swift in Sources */,

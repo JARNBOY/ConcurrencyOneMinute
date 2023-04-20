@@ -15,17 +15,26 @@ import UIKit
 enum Home
 {
     // MARK: Use cases
-    
-    enum Something
+    enum PriceAsset
     {
         struct Request
         {
+            
         }
         struct Response
         {
+            var prices: [String: Currency]
         }
         struct ViewModel
         {
+            var pricesDisplayModel: [PriceDisplayModel]
         }
     }
+    
+    struct PriceDisplayModel {
+        var nameCoin: String
+        var priceCoin: String
+    }
 }
+
+

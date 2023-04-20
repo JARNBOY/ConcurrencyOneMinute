@@ -12,9 +12,26 @@
 
 import UIKit
 
-class HomeWorker
+protocol HomeWorkerInterface {
+    func getCurrentPriceCoin(success: @escaping (Home.PriceAsset.Response) -> (), fail: @escaping (_ error: String?) -> ())
+}
+
+class HomeWorker: HomeWorkerInterface
 {
-    func doSomeWork()
-    {
+    var service: HomeService!
+    
+    init(service: HomeService) {
+        self.service = service
     }
+    
+    func getCurrentPriceCoin(success: @escaping (Home.PriceAsset.Response) -> (), fail: @escaping (String?) -> ()) {
+        service.getCurrentPriceCoin { coinAssetPriceModel in
+            
+            let response : Home.PriceAsset.Response = Home.PriceAsset.Response(prices: coinAssetPriceModel.bpi)
+            success(response)
+        } fail: { error in
+            fail(error)
+        }
+    }
+    
 }
