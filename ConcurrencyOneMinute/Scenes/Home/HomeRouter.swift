@@ -15,6 +15,7 @@ import UIKit
 @objc protocol HomeRoutingLogic
 {
     func routeToHistoryView()
+    func routeToCalculateView()
 }
 
 protocol HomeDataPassing
@@ -29,25 +30,33 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing
     
     // MARK: Routing
     
-    func routeToHistoryView()
-    {
+    func routeToHistoryView() {
         let storyboard = UIStoryboard(name: "HistoryStoryboard", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToHistoryView(source: dataStore!, destination: &destinationDS)
         navigateToHistoryView(source: viewController!, destination: destinationVC)
     }
     
-    // MARK: Navigation
+    func routeToCalculateView() {
+        let storyboard = UIStoryboard(name: "CalculatorStoryboard", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "CalculatorViewController") as! CalculatorViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToCalculatorView(source: dataStore!, destination: &destinationDS)
+        navigateToCalculatorView(source: viewController!, destination: destinationVC)
+    }
     
+    // MARK: Navigation
     func navigateToHistoryView(source: HomeViewController, destination: HistoryViewController) {
         destination.modalPresentationStyle = .fullScreen
         source.navigationController?.pushViewController(destination, animated: true)
     }
     
-    // MARK: Passing data
+    func navigateToCalculatorView(source: HomeViewController, destination: CalculatorViewController) {
+        destination.modalPresentationStyle = .fullScreen
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
     
-//    func passDataToHistoryView(source: HomeDataStore, destination: inout HistoryDataStore) {
-//      destination.name = source.name
-//    }
+    // MARK: Passing data
+    func passDataToCalculatorView(source: HomeDataStore, destination: inout CalculatorDataStore) {
+        destination.currencyRatePerBTC = source.currencyRatePerBTC
+    }
 }

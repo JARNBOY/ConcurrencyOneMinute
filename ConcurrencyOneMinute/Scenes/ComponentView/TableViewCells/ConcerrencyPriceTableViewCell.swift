@@ -17,7 +17,7 @@ class ConcerrencyPriceTableViewCell: UITableViewCell {
     
     func configure(assetTitle: String, assetPrice: String) {
         self.assetTitleLabel.text = assetTitle
-        self.assetPriceTitleLabel.text = assetPrice
+        self.assetPriceTitleLabel.text = "\(assetPrice) / BTC"
     }
 }
 

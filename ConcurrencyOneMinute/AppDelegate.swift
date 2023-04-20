@@ -10,10 +10,21 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+            // Instantiate the main storyboard
+            let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+
+            // Get the initial view controller from the storyboard
+            let initialViewController = storyboard.instantiateInitialViewController()
+
+            // Set the initial view controller as the root view controller
+            window?.rootViewController = initialViewController
+
+            // Make the window visible
+            window?.makeKeyAndVisible()
+        
         return true
     }
 

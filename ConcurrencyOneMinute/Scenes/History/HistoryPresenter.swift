@@ -21,7 +21,7 @@ class HistoryPresenter: HistoryPresentationLogic
 {
     weak var viewController: HistoryDisplayLogic?
     
-    // MARK: Do something
+    // MARK: HistoryPresentationLogic
     
     func presentGetHistoryCoinAssets(response: History.PriceAsset.ViewModel) {
         let viewModel = response

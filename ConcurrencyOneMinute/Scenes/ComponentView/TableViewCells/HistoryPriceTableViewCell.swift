@@ -19,7 +19,7 @@ class HistoryPriceTableViewCell: UITableViewCell {
     
     func configure(assetTitle: String, assetPrice: String, timeUpdated: String) {
         self.assetTitleLabel.text = assetTitle
-        self.assetPriceTitleLabel.text = assetPrice
+        self.assetPriceTitleLabel.text = "\(assetPrice) / BTC"
         self.assetTimpUpdateLabel.text = timeUpdated
     }
 }

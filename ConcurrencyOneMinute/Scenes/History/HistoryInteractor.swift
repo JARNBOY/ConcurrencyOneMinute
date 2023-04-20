@@ -27,7 +27,7 @@ class HistoryInteractor: HistoryBusinessLogic, HistoryDataStore
     var presenter: HistoryPresentationLogic?
     var worker: HistoryWorker = HistoryWorker()
     
-    // MARK: Do something
+    // MARK: HistoryBusinessLogic
     
     func getHistoryCoinAssets() {
         worker.getPriceDataInHistory { assetPrices in

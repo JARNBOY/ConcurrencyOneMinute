@@ -25,6 +25,16 @@
 		FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */; };
 		FB91E95329F17DFF005FD0C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95229F17DFF005FD0C6 /* Constants.swift */; };
 		FB91E95529F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95429F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift */; };
+		FB91E95D29F198DF005FD0C6 /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95729F198DF005FD0C6 /* CalculatorPresenter.swift */; };
+		FB91E95E29F198DF005FD0C6 /* CalculatorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95829F198DF005FD0C6 /* CalculatorWorker.swift */; };
+		FB91E95F29F198DF005FD0C6 /* CalculatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95929F198DF005FD0C6 /* CalculatorRouter.swift */; };
+		FB91E96029F198DF005FD0C6 /* CalculatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95A29F198DF005FD0C6 /* CalculatorModels.swift */; };
+		FB91E96129F198DF005FD0C6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95B29F198DF005FD0C6 /* CalculatorViewController.swift */; };
+		FB91E96229F198DF005FD0C6 /* CalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E95C29F198DF005FD0C6 /* CalculatorInteractor.swift */; };
+		FB91E96429F19959005FD0C6 /* CalculatorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91E96329F19959005FD0C6 /* CalculatorStoryboard.storyboard */; };
+		FB91E96629F19CF2005FD0C6 /* CalculatorConfigutrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E96529F19CF2005FD0C6 /* CalculatorConfigutrator.swift */; };
+		FB91E96829F1A88C005FD0C6 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E96729F1A88C005FD0C6 /* Double.swift */; };
+		FB91E96A29F1B16D005FD0C6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E96929F1B16D005FD0C6 /* String.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -59,6 +69,16 @@
 		FB91E95029F178D4005FD0C6 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		FB91E95229F17DFF005FD0C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB91E95429F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPriceTableViewCell.swift; sourceTree = "<group>"; };
+		FB91E95729F198DF005FD0C6 /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
+		FB91E95829F198DF005FD0C6 /* CalculatorWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorWorker.swift; sourceTree = "<group>"; };
+		FB91E95929F198DF005FD0C6 /* CalculatorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorRouter.swift; sourceTree = "<group>"; };
+		FB91E95A29F198DF005FD0C6 /* CalculatorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModels.swift; sourceTree = "<group>"; };
+		FB91E95B29F198DF005FD0C6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		FB91E95C29F198DF005FD0C6 /* CalculatorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorInteractor.swift; sourceTree = "<group>"; };
+		FB91E96329F19959005FD0C6 /* CalculatorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorStoryboard.storyboard; sourceTree = "<group>"; };
+		FB91E96529F19CF2005FD0C6 /* CalculatorConfigutrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConfigutrator.swift; sourceTree = "<group>"; };
+		FB91E96729F1A88C005FD0C6 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		FB91E96929F1B16D005FD0C6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				FB91E93B29F155CC005FD0C6 /* UIColor.swift */,
+				FB91E96729F1A88C005FD0C6 /* Double.swift */,
+				FB91E96929F1B16D005FD0C6 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -141,6 +163,7 @@
 		FB91E93D29F15E41005FD0C6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FB91E95629F198B8005FD0C6 /* Calculator */,
 				FB91E93E29F15E75005FD0C6 /* History */,
 				FBAEA9B929F1338600437DDA /* Home */,
 				FB91E94B29F15EB0005FD0C6 /* ComponentView */,
@@ -169,6 +192,21 @@
 				FB91E93229F141B8005FD0C6 /* TableViewCells */,
 			);
 			path = ComponentView;
+			sourceTree = "<group>";
+		};
+		FB91E95629F198B8005FD0C6 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E96329F19959005FD0C6 /* CalculatorStoryboard.storyboard */,
+				FB91E95729F198DF005FD0C6 /* CalculatorPresenter.swift */,
+				FB91E95829F198DF005FD0C6 /* CalculatorWorker.swift */,
+				FB91E95929F198DF005FD0C6 /* CalculatorRouter.swift */,
+				FB91E95A29F198DF005FD0C6 /* CalculatorModels.swift */,
+				FB91E95B29F198DF005FD0C6 /* CalculatorViewController.swift */,
+				FB91E95C29F198DF005FD0C6 /* CalculatorInteractor.swift */,
+				FB91E96529F19CF2005FD0C6 /* CalculatorConfigutrator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		FBAEA99929F1337900437DDA = {
@@ -281,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB91E96429F19959005FD0C6 /* CalculatorStoryboard.storyboard in Resources */,
 				FBAEA9B229F1337B00437DDA /* LaunchScreen.storyboard in Resources */,
 				FBAEA9AF29F1337B00437DDA /* Assets.xcassets in Resources */,
 				FB91E94D29F15ED5005FD0C6 /* HistoryStoryboard.storyboard in Resources */,
@@ -338,28 +377,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBAEA9C229F133A400437DDA /* HomeRouter.swift in Sources */,
+				FB91E95D29F198DF005FD0C6 /* CalculatorPresenter.swift in Sources */,
+				FB91E96829F1A88C005FD0C6 /* Double.swift in Sources */,
 				FB91E93C29F155CC005FD0C6 /* UIColor.swift in Sources */,
 				FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */,
 				FBAEA9C429F133A400437DDA /* HomeViewController.swift in Sources */,
+				FB91E96629F19CF2005FD0C6 /* CalculatorConfigutrator.swift in Sources */,
 				FB91E92F29F13AB5005FD0C6 /* APIManager.swift in Sources */,
 				FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */,
 				FB91E95329F17DFF005FD0C6 /* Constants.swift in Sources */,
 				FB91E94829F15E9E005FD0C6 /* HistoryModels.swift in Sources */,
 				FB91E94A29F15E9E005FD0C6 /* HistoryInteractor.swift in Sources */,
+				FB91E96A29F1B16D005FD0C6 /* String.swift in Sources */,
 				FB91E93929F14D34005FD0C6 /* CoinAssetPriceModel.swift in Sources */,
+				FB91E96029F198DF005FD0C6 /* CalculatorModels.swift in Sources */,
 				FBAEA9C129F133A400437DDA /* HomeWorker.swift in Sources */,
+				FB91E96129F198DF005FD0C6 /* CalculatorViewController.swift in Sources */,
 				FB91E93629F14589005FD0C6 /* HomeService.swift in Sources */,
 				FBAEA9C529F133A400437DDA /* HomeInteractor.swift in Sources */,
 				FB91E94729F15E9E005FD0C6 /* HistoryRouter.swift in Sources */,
 				FB91E94629F15E9E005FD0C6 /* HistoryWorker.swift in Sources */,
+				FB91E95F29F198DF005FD0C6 /* CalculatorRouter.swift in Sources */,
 				FB91E94529F15E9E005FD0C6 /* HistoryPresenter.swift in Sources */,
 				FB91E95129F178D4005FD0C6 /* LocalDataManager.swift in Sources */,
 				FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */,
 				FB91E95529F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift in Sources */,
 				FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */,
+				FB91E95E29F198DF005FD0C6 /* CalculatorWorker.swift in Sources */,
 				FB91E94929F15E9E005FD0C6 /* HistoryViewController.swift in Sources */,
 				FBAEA9C329F133A400437DDA /* HomeModels.swift in Sources */,
 				FB91E94F29F15FCC005FD0C6 /* HistoryConfigurator.swift in Sources */,
+				FB91E96229F198DF005FD0C6 /* CalculatorInteractor.swift in Sources */,
 				FB91E93129F140C8005FD0C6 /* HomeConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,8 +560,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConcurrencyOneMinute/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -542,8 +590,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConcurrencyOneMinute/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

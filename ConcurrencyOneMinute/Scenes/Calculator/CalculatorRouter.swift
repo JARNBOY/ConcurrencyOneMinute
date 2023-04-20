@@ -1,5 +1,5 @@
 //
-//  HistoryRouter.swift
+//  CalculatorRouter.swift
 //  ConcurrencyOneMinute
 //
 //  Created by Papon Supamongkonchai on 20/4/2566 BE.
@@ -12,18 +12,18 @@
 
 import UIKit
 
-@objc protocol HistoryRoutingLogic
+@objc protocol CalculatorRoutingLogic
 {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol HistoryDataPassing
+protocol CalculatorDataPassing
 {
-    var dataStore: HistoryDataStore? { get }
+    var dataStore: CalculatorDataStore? { get }
 }
 
-class HistoryRouter: NSObject, HistoryRoutingLogic, HistoryDataPassing
+class CalculatorRouter: NSObject, CalculatorRoutingLogic, CalculatorDataPassing
 {
-    weak var viewController: HistoryViewController?
-    var dataStore: HistoryDataStore?
+    weak var viewController: CalculatorViewController?
+    var dataStore: CalculatorDataStore?
 }

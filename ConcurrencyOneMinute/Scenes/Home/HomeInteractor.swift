@@ -18,12 +18,13 @@ protocol HomeBusinessLogic
     func subscribePriceUpdate()
     func unSubscribePriceUpdate()
     func openAssetHistoryPrice()
+    func openAssetCalculatorBTC(currencyRatePerBTC: CurrencyRatePerBTC)
     func savePricesInLocal(pricesListSave: [PriceDisplayModel])
 }
 
 protocol HomeDataStore
 {
-    //var name: String { get set }
+    var currencyRatePerBTC: CurrencyRatePerBTC? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore
@@ -31,11 +32,13 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
     var presenter: HomePresentationLogic?
     var worker: HomeWorker = HomeWorker(service: HomeService())
     
+    var currencyRatePerBTC: CurrencyRatePerBTC? = nil
+    
     var timeUpdate = 60
     var timer: Timer? = nil
     var assetPrices: [String: Currency]? = nil
     
-    // MARK: Do something
+    // MARK: HomeBusinessLogic
     
     func getPriceCoin(request: Home.PriceAsset.Request) {
         worker.getCurrentPriceCoin { response in
@@ -70,5 +73,10 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore
         worker.savePriceDataInHistory(pricesListSave: pricesListSave) {
             self.presenter?.presentSavePricesInLocal()
         }
+    }
+    
+    func openAssetCalculatorBTC(currencyRatePerBTC: CurrencyRatePerBTC) {
+        self.currencyRatePerBTC = currencyRatePerBTC
+        self.presenter?.presentOpenAssetCalculatorBTC()
     }
 }

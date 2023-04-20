@@ -18,6 +18,7 @@ protocol HomeDisplayLogic: AnyObject
     func displaySubscribePriceUpdate()
     func displayOpenAssetHistoryPrice()
     func displaySavePricesInLocal()
+    func displayOpenAssetCalculatorBTC()
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic
@@ -91,6 +92,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic
         self.interactor?.subscribePriceUpdate()
     }
     
+    func displayOpenAssetCalculatorBTC() {
+        self.router?.routeToCalculateView()
+    }
+    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -100,8 +105,17 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConcerrencyPriceTableViewCell", for: indexPath) as! ConcerrencyPriceTableViewCell
-        cell.configure(assetTitle: self.assetPrices[indexPath.row].nameCoin.uppercased(), assetPrice: self.assetPrices[indexPath.row].priceCoin)
+        cell.configure(
+            assetTitle: self.assetPrices[indexPath.row].nameCoin.uppercased(),
+            assetPrice: self.assetPrices[indexPath.row].priceCoin)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ratePriceCoin = self.assetPrices[indexPath.row].priceCoin.convertNemericStringToDouble()
+        let currencyRatePerBTC = CurrencyRatePerBTC(rateCoinPerBTC: ratePriceCoin, nameCoin: self.assetPrices[indexPath.row].nameCoin.uppercased())
+        self.interactor?.openAssetCalculatorBTC(currencyRatePerBTC: currencyRatePerBTC)
+    }
+
 }
 
