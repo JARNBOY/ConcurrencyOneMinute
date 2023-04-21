@@ -39,6 +39,7 @@
 		FB91E97A29F1B2EB005FD0C6 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E97929F1B2EB005FD0C6 /* Fibonacci.swift */; };
 		FB91E97C29F1B32E005FD0C6 /* PrimeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E97B29F1B32E005FD0C6 /* PrimeNumber.swift */; };
 		FB91E97E29F1B405005FD0C6 /* FilterArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E97D29F1B405005FD0C6 /* FilterArray.swift */; };
+		FB91E98229F1BA1A005FD0C6 /* ValidatePinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91E98129F1BA1A005FD0C6 /* ValidatePinCode.swift */; };
 		FBAEA9A629F1337900437DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A529F1337900437DDA /* AppDelegate.swift */; };
 		FBAEA9A829F1337900437DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA9A729F1337900437DDA /* SceneDelegate.swift */; };
 		FBAEA9AD29F1337900437DDA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAEA9AB29F1337900437DDA /* HomeStoryboard.storyboard */; };
@@ -98,6 +99,8 @@
 		FB91E97929F1B2EB005FD0C6 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		FB91E97B29F1B32E005FD0C6 /* PrimeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeNumber.swift; sourceTree = "<group>"; };
 		FB91E97D29F1B405005FD0C6 /* FilterArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterArray.swift; sourceTree = "<group>"; };
+		FB91E98129F1BA1A005FD0C6 /* ValidatePinCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePinCode.swift; sourceTree = "<group>"; };
+		FB91E98329F1BBA1005FD0C6 /* Bonus.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Bonus.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FBAEA9A229F1337900437DDA /* ConcurrencyOneMinute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyOneMinute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAEA9A529F1337900437DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAEA9A729F1337900437DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,11 +249,21 @@
 		FB91E97829F1B2DC005FD0C6 /* Bonus */ = {
 			isa = PBXGroup;
 			children = (
+				FB91E98029F1BA06005FD0C6 /* Test */,
 				FB91E97929F1B2EB005FD0C6 /* Fibonacci.swift */,
 				FB91E97B29F1B32E005FD0C6 /* PrimeNumber.swift */,
 				FB91E97D29F1B405005FD0C6 /* FilterArray.swift */,
+				FB91E98329F1BBA1005FD0C6 /* Bonus.playground */,
 			);
 			path = Bonus;
+			sourceTree = "<group>";
+		};
+		FB91E98029F1BA06005FD0C6 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				FB91E98129F1BA1A005FD0C6 /* ValidatePinCode.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		FBAEA99929F1337900437DDA = {
@@ -490,6 +503,7 @@
 				FB91E93429F1420B005FD0C6 /* ConcerrencyPriceTableViewCell.swift in Sources */,
 				FB91E95529F18DA4005FD0C6 /* HistoryPriceTableViewCell.swift in Sources */,
 				FBAEA9C029F133A400437DDA /* HomePresenter.swift in Sources */,
+				FB91E98229F1BA1A005FD0C6 /* ValidatePinCode.swift in Sources */,
 				FB91E95E29F198DF005FD0C6 /* CalculatorWorker.swift in Sources */,
 				FB91E94929F15E9E005FD0C6 /* HistoryViewController.swift in Sources */,
 				FBAEA9C329F133A400437DDA /* HomeModels.swift in Sources */,
